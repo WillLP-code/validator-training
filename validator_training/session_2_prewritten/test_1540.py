@@ -1,4 +1,5 @@
 import pandas as pd
+# If UPN (N00001) present Characters 5-12 of UPN must be numeric
 
 def validator(child_identifiers):
     pass
@@ -10,4 +11,5 @@ def test_validate():
 
     result = validator(child_identifiers)
 
-    # assert len(result) == 2
+    assert len(result) == 2
+    assert result == [2, 3]

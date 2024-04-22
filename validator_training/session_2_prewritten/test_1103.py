@@ -1,4 +1,5 @@
 import pandas as pd
+# The assessment start date cannot be before the referral date
 
 def validate(Assessments, CINdetails):
     pass
@@ -73,5 +74,6 @@ def test_validate():
 
     result = validate(Assessments=sample_ass, CINdetails= sample_refs)
 
-    # assert len(result) == 2
+    assert len(result) == 2
+    assert result == [0, 3]
 
